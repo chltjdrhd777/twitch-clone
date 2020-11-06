@@ -3,6 +3,7 @@ import ReactDOM from "react-dom";
 import styled from "styled-components";
 import App from "./App";
 import { createGlobalStyle } from "styled-components";
+import background from "./img/free-images-anonymous-mask-download-high-definiton-wallpapers-windows-10-backgrounds-amazing-4k-free-download-wallpapers-quality-images-computer-wallpapers-1920x1080-1-1200x675.jpg";
 
 const GlobalCSS = createGlobalStyle`
   *{
@@ -11,6 +12,10 @@ const GlobalCSS = createGlobalStyle`
     color:white;
     font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     text-decoration:none;
+  }
+
+  body{
+    background:url(${background})
   }
 
 `;

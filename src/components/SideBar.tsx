@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import Channel from "./Channel";
+import SearchIcon from "@material-ui/icons/Search";
 
 function SideBar() {
   return (
@@ -15,7 +16,12 @@ function SideBar() {
         <p className="sidebar_showMore">Show More</p>
       </div>
 
-      <div className="sidebar_bottom"></div>
+      <div className="sidebar_bottom">
+        <div className="sideBottomDiv">
+          <SearchIcon />
+          <input type="text" placeholder="Search to add friends" />
+        </div>
+      </div>
     </SidebarDiv>
   );
 }
@@ -26,6 +32,7 @@ const SidebarDiv = styled.div`
   flex-direction: column;
   padding: 10px;
   background-color: #1f1f23;
+  height: 100vh;
 
   & .sidebar_top {
     flex: 1;
@@ -40,6 +47,35 @@ const SidebarDiv = styled.div`
     text-transform: uppercase;
     margin-top: 25px;
     margin-bottom: 25px;
+  }
+
+  & .sidebar_bottom {
+    bottom: 0;
+    height: 4rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-top: 1px solid #4f4f52;
+
+    & .sideBottomDiv {
+      background-color: #4f4f52;
+      width: 90%;
+      display: flex;
+      height: 2.5rem;
+      border-radius: 8px;
+      align-items: center;
+      padding-left: 10px;
+      padding-right: 5px;
+
+      & > input {
+        background-color: transparent;
+        border: none;
+        outline: none;
+        font-size: large;
+        width: 100%;
+        margin-left: 10px;
+      }
+    }
   }
 `;
 
